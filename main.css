@@ -1,0 +1,130 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+body{
+    margin: -30px;
+    margin-right: 0px;
+    background-color: rgb(255, 154, 2);
+    font-family: 'Baloo Paaji', cursive;
+    color:linear-gradient(0deg, rgba(249, 217, 5, 1) 0%, rgba(255, 128, 1, 1) 100%); 
+    background: white;
+        
+        
+        
+}
+
+
+img {
+   height: 685px;
+   width: 250px;
+}
+
+.offcanvas{
+    backdrop-filter: blur(13px) saturate(173%);
+        -webkit-backdrop-filter: blur(13px) saturate(173%);
+        background-color: rgba(255, 255, 255, 0.41);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+
+}
+
+.offcanvas-body {
+    backdrop-filter: blur(4px) saturate(169%);
+    -webkit-backdrop-filter: blur(4px) saturate(169%);
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    align-items: center;
+    margin-top: -50px;
+}
+
+h1 {
+    font-size: 75px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px yellow;
+}
+
+
+span {
+        width: 100%;
+        float: left;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        transform: translateY(-50px);
+        opacity: 0;
+        animation-name: titleAnimation;
+        animation-timing-function: ease;
+        animation-duration: 3s;
+    }
+
+
+h1 span {
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+   
+}
+
+
+@keyframes titleAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+
+    }
+}
+
+
+p {
+    text-align: center;
+        margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+        color: #fff;
+}
+
+p:after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: flash .50s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
